@@ -12,4 +12,13 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: var(--font-zen), sans-serif;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.mantine-Notifications-notification::before {
+  display: none;
 }
