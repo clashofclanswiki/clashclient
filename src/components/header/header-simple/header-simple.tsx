@@ -2,7 +2,6 @@
 
 import {
   Avatar,
-  Box,
   Burger,
   Button,
   Container,
@@ -16,6 +15,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { IconLogout, IconUserCircle } from '@tabler/icons-react'
 import { useMutation } from '@tanstack/react-query'
 import cx from 'clsx'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -61,30 +61,17 @@ export function HeaderSimple() {
   const image =
     'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png'
 
-  const items = MENU.map(link => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={event => {
-        event.preventDefault()
-        setActive(link.link)
-      }}
-    >
-      {link.label}
-    </a>
-  ))
-
   return (
     <div className={classes.header}>
-      <Container size='lg' className={classes.inner}>
-        <Box w={174.13}>
-          <Link href={'/'}>LOGO</Link>
-        </Box>
-        <Group gap={5} visibleFrom='xs'>
-          {items}
-        </Group>
+      <div className={classes.inner}>
+        <Link
+          href={'/'}
+          style={{
+            display: 'flex'
+          }}
+        >
+          <Image width={147} height={40} src='/logo.png' alt='logo' priority />
+        </Link>
 
         <Group w={174.13} h={40}>
           <Skeleton
@@ -129,7 +116,7 @@ export function HeaderSimple() {
                         stroke={1.5}
                       />
                     }
-                    onClick={() => push(PROFILE_PAGES.MAIN)}
+                    onClick={() => push(`${PROFILE_PAGES.MAIN}`)}
                   >
                     Мой профиль
                   </Menu.Item>
@@ -160,7 +147,7 @@ export function HeaderSimple() {
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom='xs' size='sm' />
-      </Container>
+      </div>
     </div>
   )
 }
