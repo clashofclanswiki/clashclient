@@ -1,4 +1,9 @@
-import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core'
+import {
+  ColorSchemeScript,
+  Flex,
+  MantineProvider,
+  createTheme
+} from '@mantine/core'
 import '@mantine/core/styles.css'
 import '@mantine/dropzone/styles.css'
 import { ModalsProvider } from '@mantine/modals'
@@ -11,6 +16,7 @@ import NextTopLoader from 'nextjs-toploader'
 import React from 'react'
 
 import { Header } from '@/components/header/header'
+import { Navbar } from '@/components/navbar/navbar'
 
 import { SITE_NAME } from '@/constants/seo.constants'
 
@@ -81,9 +87,7 @@ export default function RootLayout({
             <Providers>
               <Header />
               <main className='main'>
-                {/* <Container size='lg' pt='md' pb='md' h='100%'>
-                  {children}
-                </Container> */}
+                <Navbar />
                 {children}
               </main>
             </Providers>
