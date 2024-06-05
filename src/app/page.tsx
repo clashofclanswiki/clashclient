@@ -9,7 +9,7 @@ import styles from './page.module.css'
 
 async function getPost() {
   const res = await fetch(`http://localhost:4200/api/post`, {
-    cache: 'no-cache'
+    next: { revalidate: 3600 }
   })
 
   if (!res.ok) {

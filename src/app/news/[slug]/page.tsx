@@ -5,7 +5,7 @@ import { RouteParams } from '@/types/root.types'
 
 async function getPostFull(slug: string) {
   const res = await fetch(`http://localhost:4200/api/post/${slug}`, {
-    cache: 'no-cache'
+    next: { revalidate: 3600 }
   })
 
   if (!res.ok) {

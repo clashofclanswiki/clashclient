@@ -7,7 +7,7 @@ import { ICategoryOne } from '@/types/category.types'
 
 async function getCategory() {
   const res = await fetch(`http://localhost:4200/api/category/news`, {
-    cache: 'no-cache'
+    next: { revalidate: 3600 }
   })
 
   if (!res.ok) {
