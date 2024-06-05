@@ -1,0 +1,16 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  background: var(--mantine-color-gray-8);
+  padding: rem(20px);
+  border-radius: rem(10px);
+  gap: rem(8px);
+  text-decoration: inherit;
+  color: inherit;
+  width: 100%;
+  align-items: center;
+}
+
+.image {
+  border-radius: rem(10px);
+}

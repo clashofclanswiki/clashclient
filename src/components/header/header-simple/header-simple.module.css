@@ -1,17 +1,19 @@
 .header {
   flex: 0 0 auto;
-  height: rem(56px);
-  background-color: var(--mantine-color-body);
-  border-bottom: rem(1px) solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  height: rem(60px);
+  background-color: var(--mantine-color-gray-9);
 }
 
 .inner {
-  height: rem(56px);
-  padding: 0 rem(8px);
+  height: rem(60px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  display: flex;
+  width: 174.13px;
 }
 
 .link {

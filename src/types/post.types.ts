@@ -11,7 +11,7 @@ export interface IPost extends IBase {
   image?: string
   userId?: string
   categoryId?: string
-  category?: ICategory | null
+  category: ICategory
 }
 
 export interface IPostDate {

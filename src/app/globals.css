@@ -5,11 +5,15 @@
 }
 
 :root {
-  --mantine-color-dark-9: #0e1217;
+  --mantine-color-dark-9: #161617;
 }
 
 :root[data-mantine-color-scheme='dark'] {
   --mantine-color-body: var(--mantine-color-dark-9);
+
+  --mantine-color-gray-9: #2a2729;
+  --mantine-color-gray-8: #232324;
+  --mantine-color-dark-0: #fff;
 }
 
 html {
@@ -23,6 +27,11 @@ body {
   font-family: var(--font-zen), sans-serif;
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .main {
   flex: 1 0 auto;
   display: flex;
@@ -31,6 +40,12 @@ body {
 
 .mantine-Notifications-notification::before {
   display: none;
+}
+
+.ProseMirror {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
 }
 
 .tiptap {
@@ -43,7 +58,7 @@ body {
 
     td,
     th {
-      border: 2px solid #ced4da;
+      border: 1px solid #ced4da;
       box-sizing: border-box;
       min-width: 1em;
       padding: 3px 5px;
@@ -56,7 +71,7 @@ body {
     }
 
     th {
-      background-color: #f1f3f5;
+      /* background-color: #f1f3f5; */
       font-weight: bold;
       text-align: left;
     }

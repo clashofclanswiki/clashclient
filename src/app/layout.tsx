@@ -1,9 +1,4 @@
-import {
-  ColorSchemeScript,
-  Flex,
-  MantineProvider,
-  createTheme
-} from '@mantine/core'
+import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core'
 import '@mantine/core/styles.css'
 import '@mantine/dropzone/styles.css'
 import { ModalsProvider } from '@mantine/modals'
@@ -15,8 +10,8 @@ import { Noto_Sans } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import React from 'react'
 
+import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
-import { Navbar } from '@/components/navbar/navbar'
 
 import { SITE_NAME } from '@/constants/seo.constants'
 
@@ -42,13 +37,6 @@ export const metadata: Metadata = {
 const theme = createTheme({
   // primaryColor: 'dark',
   components: {
-    // Button: {
-    //   defaultProps: {
-    //     color: 'violet.5',
-    //     radius: rem(8)
-    //   }
-    // },
-
     TextInput: {
       defaultProps: {
         style: {
@@ -86,10 +74,8 @@ export default function RootLayout({
             <Notifications position='top-center' zIndex={1000} />
             <Providers>
               <Header />
-              <main className='main'>
-                <Navbar />
-                {children}
-              </main>
+              <main className='main'>{children}</main>
+              <Footer />
             </Providers>
           </ModalsProvider>
         </MantineProvider>

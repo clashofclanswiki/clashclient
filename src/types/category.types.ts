@@ -1,3 +1,4 @@
+import { IPostResponse } from './post.types'
 import { IBase } from './root.types'
 
 export interface ICategory extends IBase {
@@ -5,6 +6,12 @@ export interface ICategory extends IBase {
   description: string
   slug: string
   type: string
+  posts: IPostResponse
+}
+
+export interface ICategoryOne {
+  data: ICategory
+  posts: IPostResponse
 }
 
 export interface ICategoryDate {
