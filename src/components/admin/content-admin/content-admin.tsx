@@ -5,6 +5,7 @@ import { IconPencil, IconTrash } from '@tabler/icons-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
+import { ICategory } from '@/types/category.types'
 import { IPost } from '@/types/post.types'
 
 import { useRemoveCategory } from '@/hooks/category/useRemoveCategory'
@@ -12,7 +13,13 @@ import { useRemovePost } from '@/hooks/post/useRemovePost'
 
 type Type = 'news' | 'category'
 
-export function ContentAdmin({ data, type }: { data?: IPost[]; type: Type }) {
+export function ContentAdmin({
+  data,
+  type
+}: {
+  data?: IPost[] | ICategory[]
+  type: Type
+}) {
   const { push } = useRouter()
 
   const { removeCategory } = useRemoveCategory()
@@ -33,11 +40,11 @@ export function ContentAdmin({ data, type }: { data?: IPost[]; type: Type }) {
 
       <Table.Td>{item.description}</Table.Td>
 
-      <Table.Td>
+      {/* <Table.Td>
         <Flex align='center'>
           {item?.countOpened && <Text fz='sm'>{item.countOpened}</Text>}
         </Flex>
-      </Table.Td>
+      </Table.Td> */}
 
       <Table.Td>
         <Group gap={0} justify='flex-end'>
@@ -77,7 +84,7 @@ export function ContentAdmin({ data, type }: { data?: IPost[]; type: Type }) {
           <Table.Tr>
             <Table.Th>Заголовок</Table.Th>
             <Table.Th>Категория / Тип</Table.Th>
-            {type === 'news' && <Table.Th>Просмотры</Table.Th>}
+            {/* {type === 'news' && <Table.Th>Просмотры</Table.Th>} */}
             <Table.Th />
           </Table.Tr>
         </Table.Thead>
