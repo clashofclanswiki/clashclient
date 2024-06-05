@@ -8,7 +8,7 @@ import { IPostResponse } from '@/types/post.types'
 import styles from './page.module.css'
 
 async function getPost() {
-  const res = await fetch(`${process.env.SERVER_URL}/post`, {
+  const res = await fetch(`http://localhost:4200/api/post`, {
     cache: 'no-cache'
   })
 

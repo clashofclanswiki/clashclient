@@ -4,7 +4,7 @@ import { IPost } from '@/types/post.types'
 import { RouteParams } from '@/types/root.types'
 
 async function getPostFull(slug: string) {
-  const res = await fetch(`${process.env.SERVER_URL}/post/${slug}`, {
+  const res = await fetch(`http://localhost:4200/api/post/${slug}`, {
     cache: 'no-cache'
   })
 

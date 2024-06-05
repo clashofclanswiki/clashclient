@@ -6,7 +6,7 @@ import { CategoryInfo } from '@/components/category-info/category-info'
 import { ICategoryOne } from '@/types/category.types'
 
 async function getCategory() {
-  const res = await fetch(`${process.env.SERVER_URL}/category/news`, {
+  const res = await fetch(`http://localhost:4200/api/category/news`, {
     cache: 'no-cache'
   })
 
