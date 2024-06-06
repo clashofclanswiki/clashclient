@@ -8,8 +8,8 @@ import { IPostResponse } from '@/types/post.types'
 import styles from './page.module.css'
 
 async function getPost() {
-  const res = await fetch(`http://localhost:4200/api/post`, {
-    next: { revalidate: 3600 }
+  const res = await fetch(`${process.env.SERVER_URL}/post`, {
+    cache: 'no-cache'
   })
 
   if (!res.ok) {

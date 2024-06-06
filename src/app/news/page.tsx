@@ -6,8 +6,8 @@ import { CategoryInfo } from '@/components/category-info/category-info'
 import { ICategoryOne } from '@/types/category.types'
 
 async function getCategory() {
-  const res = await fetch(`http://localhost:4200/api/category/news`, {
-    next: { revalidate: 3600 }
+  const res = await fetch(`${process.env.SERVER_URL}/category/news`, {
+    cache: 'no-cache'
   })
 
   if (!res.ok) {
@@ -23,8 +23,8 @@ export default async function NewsPage() {
   return (
     <Flex gap='md' direction='column' align='center'>
       <CategoryInfo
-        title={data.data.title}
-        description={data.data.description}
+        title={data?.data?.title}
+        description={data?.data?.description}
       />
       {data.posts.data.map(elem => (
         <CardItem post={elem} key={elem.id} />
