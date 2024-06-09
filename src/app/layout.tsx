@@ -59,6 +59,7 @@ export default function RootLayout({
           content='z6fYZwbOzmsMMSchtzy1FdBjILHiB-UXLdctk_muwyc'
         />
         <meta name='yandex-verification' content='198818c4a158068a' />
+        <meta name='google-adsense-account' content='ca-pub-5268953290663095' />
         <ColorSchemeScript defaultColorScheme='dark' />
       </head>
       <body className={zen.className}>
