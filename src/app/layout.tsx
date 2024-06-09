@@ -55,6 +55,11 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <head>
+        <meta
+          name='google-site-verification'
+          content='z6fYZwbOzmsMMSchtzy1FdBjILHiB-UXLdctk_muwyc'
+        />
+        <meta name='yandex-verification' content='198818c4a158068a' />
         <ColorSchemeScript defaultColorScheme='dark' />
       </head>
       <body className={zen.className}>
