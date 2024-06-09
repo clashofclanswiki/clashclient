@@ -1,12 +1,9 @@
 import { Flex } from '@mantine/core'
 
-import { CardItem } from '@/components/card/card-item'
 import { CategoryInfo } from '@/components/category-info/category-info'
 import { WikiCard } from '@/components/wiki/wiki-card/wiki-card'
 
-import { INDEX_PAGE } from '@/constants/seo.constants'
-
-import { ICategory, ICategoryOne } from '@/types/category.types'
+import { ICategoryOne } from '@/types/category.types'
 import { RouteWikiParams } from '@/types/root.types'
 
 export async function generateMetadata({ params }: RouteWikiParams) {
@@ -16,8 +13,7 @@ export async function generateMetadata({ params }: RouteWikiParams) {
 
   return {
     title: data.data.title,
-    description: data.data.description,
-    ...INDEX_PAGE
+    description: data.data.description
   }
 }
 

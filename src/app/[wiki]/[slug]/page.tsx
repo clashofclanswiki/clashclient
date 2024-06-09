@@ -1,7 +1,5 @@
 import { WikiFullPost } from '@/components/wiki/wiki-full-post/wiki-full-post'
 
-import { INDEX_PAGE } from '@/constants/seo.constants'
-
 import { IPost } from '@/types/post.types'
 import { RouteParams } from '@/types/root.types'
 
@@ -12,8 +10,7 @@ export async function generateMetadata({ params }: RouteParams) {
 
   return {
     title: `${data.title} | ${data.category.title}`,
-    description: data.description,
-    ...INDEX_PAGE
+    description: data.description
   }
 }
 

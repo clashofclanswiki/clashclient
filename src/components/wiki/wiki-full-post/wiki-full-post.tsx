@@ -16,7 +16,7 @@ export function WikiFullPost({ post }: { post: IPost }) {
       <Text fw={600}>{description}</Text>
       <Box>
         <Image
-          src={`${process.env.IMAGE_URL}${image}`}
+          src={`${process.env.BASE_URL}${image}`}
           width='100%'
           height={220}
           className={classes.image}

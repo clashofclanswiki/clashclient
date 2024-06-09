@@ -3,11 +3,8 @@ import { Metadata } from 'next'
 
 import { NavAdmin } from '@/components/admin/nav-admin/nav-admin'
 
-import { NO_INDEX_PAGE } from '@/constants/seo.constants'
-
 export const metadata: Metadata = {
-  title: 'Админ',
-  ...NO_INDEX_PAGE
+  title: 'Админ'
 }
 
 export default function AdminLayout({

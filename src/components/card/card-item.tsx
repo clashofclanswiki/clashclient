@@ -13,7 +13,7 @@ export function CardItem({ post }: { post: IPost }) {
       <Title order={2}>{title}</Title>
       <Text>{description}</Text>
       <Image
-        src={`${process.env.IMAGE_URL}${image}`}
+        src={`${process.env.BASE_URL}${image}`}
         width='100%'
         height={333}
         className={classes.image}

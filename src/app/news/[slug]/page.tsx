@@ -1,7 +1,5 @@
 import { FullPost } from '@/components/full-post/full-post'
 
-import { INDEX_PAGE } from '@/constants/seo.constants'
-
 import { IPost } from '@/types/post.types'
 import { RouteParams } from '@/types/root.types'
 
@@ -10,8 +8,7 @@ export async function generateMetadata({ params }: RouteParams) {
   const data: IPost = await getPostFull(slug)
   return {
     title: data.title,
-    description: data.description,
-    ...INDEX_PAGE
+    description: data.description
   }
 }
 

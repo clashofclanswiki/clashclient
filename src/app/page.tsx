@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { CardItem } from '@/components/card/card-item'
 import { WikiLink } from '@/components/wiki/wiki-link/wiki-link'
 
-import { INDEX_PAGE, SITE_NAME } from '@/constants/seo.constants'
+import { SITE_NAME } from '@/constants/seo.constants'
 
 import { IPostResponse } from '@/types/post.types'
 
@@ -13,8 +13,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} - новости, герои и вики статьи`,
-  description: `${SITE_NAME} - ваш главный источник новостей, стратегий и описаний по героям и строениям игры. Присоединяйтесь к сообществу и станьте мастером в Clash of Clans!`,
-  ...INDEX_PAGE
+  description: `${SITE_NAME} - ваш главный источник новостей, стратегий и описаний по героям и строениям игры. Присоединяйтесь к сообществу и станьте мастером в Clash of Clans!`
 }
 
 async function getPost() {

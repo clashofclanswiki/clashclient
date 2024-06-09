@@ -15,7 +15,7 @@ export function WikiCard({ post }: { post: IPost }) {
       </Title>
 
       <Image
-        src={`${process.env.IMAGE_URL}${image}`}
+        src={`${process.env.BASE_URL}${image}`}
         width='100%'
         height={114}
         alt={slug}

@@ -4,14 +4,13 @@ import { Metadata } from 'next'
 import { CardItem } from '@/components/card/card-item'
 import { CategoryInfo } from '@/components/category-info/category-info'
 
-import { INDEX_PAGE, SITE_NAME } from '@/constants/seo.constants'
+import { SITE_NAME } from '@/constants/seo.constants'
 
 import { ICategoryOne } from '@/types/category.types'
 
 export const metadata: Metadata = {
   title: `Новости Clash of Clans`,
-  description: `На ${SITE_NAME} вы найдете все свежие новости о Clash of Clans. От обновлений до стратегий – всё, что нужно знать игрокам, на одной странице.`,
-  ...INDEX_PAGE
+  description: `На ${SITE_NAME} вы найдете все свежие новости о Clash of Clans. От обновлений до стратегий – всё, что нужно знать игрокам, на одной странице.`
 }
 
 async function getCategory() {

@@ -4,14 +4,13 @@ import { Metadata } from 'next'
 import { CategoryInfo } from '@/components/category-info/category-info'
 import { WikiCategory } from '@/components/wiki/wiki-category/wiki-category'
 
-import { INDEX_PAGE, SITE_NAME } from '@/constants/seo.constants'
+import { SITE_NAME } from '@/constants/seo.constants'
 
 import { ICategoryResponse } from '@/types/category.types'
 
 export const metadata: Metadata = {
   title: `Родная деревня | Вики`,
-  description: `Исследуйте родную деревню в Clash of Clans на ${SITE_NAME}. Защита, ресурсы, армия и лучшие стратегии для успешной игры. Сделайте свою деревню непобедимой!`,
-  ...INDEX_PAGE
+  description: `Исследуйте родную деревню в Clash of Clans на ${SITE_NAME}. Защита, ресурсы, армия и лучшие стратегии для успешной игры. Сделайте свою деревню непобедимой!`
 }
 
 async function getCategory() {

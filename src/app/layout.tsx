@@ -13,7 +13,7 @@ import React from 'react'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
 
-import { INDEX_PAGE, SITE_NAME } from '@/constants/seo.constants'
+import { SITE_NAME } from '@/constants/seo.constants'
 
 import './globals.css'
 import { Providers } from './providers'
@@ -29,8 +29,7 @@ const zen = Noto_Sans({
 export const metadata: Metadata = {
   title: {
     template: `%s | ${SITE_NAME}`,
-    default: SITE_NAME,
-    ...INDEX_PAGE
+    default: SITE_NAME
   }
 }
 

@@ -3,11 +3,8 @@ import { Metadata } from 'next'
 
 import { Sidebar } from '@/components/sidebar/sidebar'
 
-import { NO_INDEX_PAGE } from '@/constants/seo.constants'
-
 export const metadata: Metadata = {
-  title: 'Админка',
-  ...NO_INDEX_PAGE
+  title: 'Админка'
 }
 
 export default function ProfileLayout({
