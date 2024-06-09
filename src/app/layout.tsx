@@ -5,6 +5,7 @@ import { ModalsProvider } from '@mantine/modals'
 import { Notifications } from '@mantine/notifications'
 import '@mantine/notifications/styles.css'
 import '@mantine/tiptap/styles.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
@@ -34,7 +35,6 @@ export const metadata: Metadata = {
 }
 
 const theme = createTheme({
-  // primaryColor: 'dark',
   components: {
     TextInput: {
       defaultProps: {
@@ -85,6 +85,7 @@ export default function RootLayout({
           </ModalsProvider>
         </MantineProvider>
       </body>
+      <GoogleAnalytics gaId='G-D70DZ6KMV0' />
     </html>
   )
 }

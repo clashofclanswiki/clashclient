@@ -57,6 +57,26 @@ export function AddNewsAdmin({
 
   const { data } = useAllCategory(skip, take)
 
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      Underline,
+      Link,
+      Superscript,
+      SubScript,
+      Highlight,
+      Table.configure({
+        resizable: true
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
+      Image,
+      TextAlign.configure({ types: ['heading', 'paragraph'] })
+    ],
+    content
+  })
+
   useEffect(() => {
     if (
       oldSlug &&
@@ -78,27 +98,7 @@ export function AddNewsAdmin({
         editor.commands.setContent(post.content)
       }
     }
-  }, [post, oldSlug])
-
-  const editor = useEditor({
-    extensions: [
-      StarterKit,
-      Underline,
-      Link,
-      Superscript,
-      SubScript,
-      Highlight,
-      Table.configure({
-        resizable: true
-      }),
-      TableRow,
-      TableHeader,
-      TableCell,
-      Image,
-      TextAlign.configure({ types: ['heading', 'paragraph'] })
-    ],
-    content
-  })
+  }, [post, oldSlug, editor])
 
   const categoryList = data?.data.map(elem => ({
     value: elem.id,
