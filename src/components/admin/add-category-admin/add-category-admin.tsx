@@ -3,7 +3,7 @@
 import { Button, Flex, TextInput, Textarea, Title, rem } from '@mantine/core'
 import { useEffect, useState } from 'react'
 
-import { ICategory } from '@/types/category.types'
+import { ICategory, ICategoryOne } from '@/types/category.types'
 
 import { useCreateCategory } from '@/hooks/category/useCreateCategory'
 import { useUpdateCategory } from '@/hooks/category/useUpdateCategory'
@@ -14,28 +14,30 @@ export function AddCategoryAdmin({
   category,
   oldSlug
 }: {
-  category?: ICategory
+  category?: ICategoryOne
   oldSlug?: string
 }) {
-  const [title, setTitle] = useState<string>(category?.title || '')
-  const [slug, setSlug] = useState<string>(category?.slug || '')
+  const [title, setTitle] = useState<string>(category?.data.title || '')
+  const [slug, setSlug] = useState<string>(category?.data?.slug || '')
   const [description, setDescription] = useState<string>(
-    category?.description || ''
+    category?.data?.description || ''
   )
-  const [type, setType] = useState<string>(category?.type || '')
+  const [type, setType] = useState<string>(category?.data?.type || '')
+
+  console.log(category)
 
   useEffect(() => {
     if (
       oldSlug &&
-      category?.title &&
-      category?.slug &&
-      category?.description &&
-      category?.type
+      category?.data?.title &&
+      category?.data?.slug &&
+      category?.data?.description &&
+      category?.data?.type
     ) {
-      setTitle(category.title)
-      setSlug(category.slug)
-      setDescription(category.description)
-      setType(category.type)
+      setTitle(category.data.title)
+      setSlug(category.data.slug)
+      setDescription(category.data.description)
+      setType(category.data.type)
     }
   }, [category, oldSlug])
 

@@ -12,7 +12,7 @@ export function CategoryInfo({
   return (
     <div className={classes.card}>
       <Title order={2}>{title}</Title>
-      <Text>{description}</Text>
+      <Text className={classes.desc}>{description}</Text>
     </div>
   )
 }

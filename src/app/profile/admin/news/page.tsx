@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 
 import { ContentAdmin } from '@/components/admin/content-admin/content-admin'
 
+import { NO_INDEX_PAGE } from '@/constants/seo.constants'
+
 import { useAllPost } from '@/hooks/post/useAllPost'
 
 export default function News() {

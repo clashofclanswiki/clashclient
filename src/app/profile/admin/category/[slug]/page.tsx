@@ -9,11 +9,11 @@ import { useFullInfoCategory } from '@/hooks/category/useFullInfoCategory'
 export default function EditCategoryPage() {
   const { slug } = useParams<{ slug: string }>()
 
-  const { data } = useFullInfoCategory(slug)
+  const { categoryOne } = useFullInfoCategory(slug)
 
   return (
     <>
-      <AddCategoryAdmin category={data} oldSlug={slug} />
+      <AddCategoryAdmin category={categoryOne} oldSlug={slug} />
     </>
   )
 }

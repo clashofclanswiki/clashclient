@@ -4,14 +4,23 @@ import {
   IconBrandTwitter,
   IconBrandYoutube
 } from '@tabler/icons-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import classes from './footer.module.css'
 
 export function Footer() {
   return (
-    <div className={classes.footer}>
+    <footer className={classes.footer}>
       <Container size='xl' className={classes.inner}>
-        Logo
+        <Link
+          href={'/'}
+          style={{
+            display: 'flex'
+          }}
+        >
+          <Image width={30} height={30} src='/logo.png' alt='logo' priority />
+        </Link>
         <Group
           gap={0}
           className={classes.links}
@@ -38,6 +47,6 @@ export function Footer() {
           </ActionIcon>
         </Group>
       </Container>
-    </div>
+    </footer>
   )
 }

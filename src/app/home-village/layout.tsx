@@ -1,9 +1,6 @@
 import { Box, Container, rem } from '@mantine/core'
-import { Metadata } from 'next'
 
-import { SITE_NAME } from '@/constants/seo.constants'
-
-export default function NewsLayout({
+export default function HomeLayout({
   children
 }: {
   children: React.ReactNode

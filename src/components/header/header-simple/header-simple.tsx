@@ -63,10 +63,9 @@ export function HeaderSimple() {
   }
 
   const links = [
-    { link: '/news', label: 'Новости' }
-    // { link: '/pricing', label: 'Pricing' },
-    // { link: '/learn', label: 'Learn' },
-    // { link: '/community', label: 'Community' }
+    { link: '/news', label: 'Новости' },
+    { link: '/home-village', label: 'Родная деревня' },
+    { link: '/builder-base', label: 'Деревня строителя' }
   ]
 
   const items = links.map(link => (

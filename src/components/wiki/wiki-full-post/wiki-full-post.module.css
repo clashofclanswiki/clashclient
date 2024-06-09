@@ -1,7 +1,6 @@
-.card {
+.post {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: var(--mantine-color-gray-8);
   padding: rem(20px);
   border-radius: rem(10px);
@@ -9,8 +8,9 @@
   text-decoration: inherit;
   color: inherit;
   width: 100%;
+  align-items: center;
 }
 
-.desc {
-  text-align: center;
+.image {
+  border-radius: rem(10px);
 }

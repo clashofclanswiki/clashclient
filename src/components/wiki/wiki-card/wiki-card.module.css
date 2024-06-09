@@ -1,16 +1,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: var(--mantine-color-gray-8);
   padding: rem(20px);
   border-radius: rem(10px);
   gap: rem(8px);
   text-decoration: inherit;
   color: inherit;
+  max-width: 200px;
   width: 100%;
 }
 
-.desc {
+.title {
   text-align: center;
 }

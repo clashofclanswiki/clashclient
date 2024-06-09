@@ -1,7 +1,14 @@
 import { Box, Flex } from '@mantine/core'
+import { Metadata } from 'next'
 
 import { NavAdmin } from '@/components/admin/nav-admin/nav-admin'
-import { Sidebar } from '@/components/sidebar/sidebar'
+
+import { NO_INDEX_PAGE } from '@/constants/seo.constants'
+
+export const metadata: Metadata = {
+  title: 'Админ',
+  ...NO_INDEX_PAGE
+}
 
 export default function AdminLayout({
   children

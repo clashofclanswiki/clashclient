@@ -1,6 +1,7 @@
 import {
   ICategory,
   ICategoryDate,
+  ICategoryOne,
   ICategoryResponse
 } from '@/types/category.types'
 
@@ -22,7 +23,7 @@ class CategoryService {
   }
 
   async getFullInfoCategory(slug: string) {
-    const response = await axiosClassic.get<ICategory>(
+    const response = await axiosClassic.get<ICategoryOne>(
       `${this.BASE_URL}/${slug}`
     )
     return response.data

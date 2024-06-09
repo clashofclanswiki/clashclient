@@ -9,3 +9,9 @@ export interface RouteParams {
     slug: string
   }
 }
+
+export interface RouteWikiParams {
+  params: {
+    wiki: string
+  }
+}

@@ -1,4 +1,4 @@
-import { FullPost } from '@/components/full-post/full-post'
+import { WikiFullPost } from '@/components/wiki/wiki-full-post/wiki-full-post'
 
 import { INDEX_PAGE } from '@/constants/seo.constants'
 
@@ -7,9 +7,11 @@ import { RouteParams } from '@/types/root.types'
 
 export async function generateMetadata({ params }: RouteParams) {
   const { slug } = params
+
   const data: IPost = await getPostFull(slug)
+
   return {
-    title: data.title,
+    title: `${data.title} | ${data.category.title}`,
     description: data.description,
     ...INDEX_PAGE
   }
@@ -31,5 +33,5 @@ export default async function FullPostPage({ params }: RouteParams) {
   const { slug } = params
   const data: IPost = await getPostFull(slug)
 
-  return <FullPost post={data} />
+  return <WikiFullPost post={data} />
 }
