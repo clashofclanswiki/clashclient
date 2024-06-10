@@ -10,7 +10,7 @@ import { ICategoryOne } from '@/types/category.types'
 
 export const metadata: Metadata = {
   title: `Новости Clash of Clans`,
-  description: `На ${SITE_NAME} вы найдете все свежие новости о Clash of Clans. От обновлений до стратегий – всё, что нужно знать игрокам, на одной странице.`
+  description: `На ClashOfClansWiki.ru вы найдете все свежие новости о Clash of Clans. От обновлений до стратегий – всё, что нужно знать игрокам, на одной странице.`
 }
 
 async function getCategory() {

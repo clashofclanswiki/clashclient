@@ -13,7 +13,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} - новости, герои и вики статьи`,
-  description: `${SITE_NAME} - ваш главный источник новостей, стратегий и описаний по героям и строениям игры. Присоединяйтесь к сообществу и станьте мастером в Clash of Clans!`
+  description: `ClashOfClansWiki.ru - ваш главный источник новостей, стратегий и описаний по героям и строениям игры. Присоединяйтесь к сообществу и станьте мастером в Clash of Clans!`
 }
 
 async function getPost() {
